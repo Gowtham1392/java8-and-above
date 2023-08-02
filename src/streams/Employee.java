@@ -3,16 +3,38 @@ package streams;
 public class Employee {
 	
 	private int id;
-	private String first_name;
-	private String last_name;
+	private String name;
 	private long salary;
 	private String dept;
-	public Employee(int id, String first_name, String last_name, long salary, String dept) {
+	public Employee(int id, String name, long salary, String dept) {
 		super();
 		this.id = id;
-		this.first_name = first_name;
-		this.last_name = last_name;
+		this.name = name;
 		this.salary = salary;
+		this.dept = dept;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String first_name) {
+		this.name = first_name;
+	}
+	public long getSalary() {
+		return salary;
+	}
+	public void setSalary(long salary) {
+		this.salary = salary;
+	}
+	public String getDept() {
+		return dept;
+	}
+	public void setDept(String dept) {
 		this.dept = dept;
 	}
 	
