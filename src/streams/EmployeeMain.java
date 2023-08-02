@@ -2,6 +2,8 @@ package streams;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class EmployeeMain {
 
@@ -23,6 +25,11 @@ public class EmployeeMain {
 		List<Employee> list = Arrays.asList(employees);
 		list.stream().filter(employee -> employee.getSalary() > 5000)
 		.forEach(employee -> System.out.println(employee.getName()));
+		
+		Map<String, List<Employee>> employeeGroup = list.stream()
+				.collect(Collectors.groupingBy(Employee -> Employee.getDept()));
+		
+		employeeGroup.forEach((Dept, Name) -> System.out.println("Department->"+Dept+" Employees->"+Name));
 	}
 
 }
