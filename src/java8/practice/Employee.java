@@ -1,4 +1,4 @@
-package streams;
+package java8.practice;
 
 public class Employee {
 	
@@ -39,8 +39,9 @@ public class Employee {
 	}
 	@Override
 	public String toString() {
-		return name;
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", dept=" + dept + "]";
 	}
+	
 	
 	
 	
