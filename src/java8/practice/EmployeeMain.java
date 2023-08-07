@@ -60,7 +60,6 @@ public class EmployeeMain {
 		Double avgSalary = list.stream().mapToDouble(emp -> emp.getSalary()).average().getAsDouble();
 		System.out.println("Average salary->"+avgSalary);
 		
-		list.stream().collect(Collectors.groupingBy(emp -> emp.getDept()));
 	}
 
 }
